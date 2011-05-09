@@ -1,15 +1,27 @@
-## An easier way to install and run jstestdriver
-
 Install
 
-    npm install jstestdriver
+    sudo npm install jstestdriver -g
 
 Start test server
 
-    jstestdriver start -p 9876
+    jstestdriver start [ --config path/to/config ]
+
+If you leave out the `config` flag it will default to `./jsTestDriver.conf`
 
 Run tests
 
-    jstestdriver run
+    jstestdriver run [ --tests path/to/tests ]
 
-See the wiki for a full list of commands and options.    
+If you leave out the `tests` flag it will run all tests by default.
+
+Stop the server
+
+    jstestdriver stop
+
+Run an arbitrary command
+
+    jstestdriver <commands>
+
+This can be done after any of the above commands as well. E.g.
+
+    jstestdriver run --runnerMode DEBUG
