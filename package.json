@@ -4,6 +4,7 @@
     "author": "Richard Layte",
     "description": "Wrapper for Google's jstestdriver",
     "keywords": [ "test", "tdd", "command-line" ],
+    "repository": { "type": "git", "url": "git@github.com:rlayte/jstestdriver-wrapper.git" },
     "preferGlobal": true,
     "dependencies": { "underscore": ">=1.1.6" },
     "bin": "./bin/jstestdriver",

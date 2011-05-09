@@ -1,27 +1,37 @@
-Install
+### Install
 
     sudo npm install jstestdriver -g
 
-Start test server
+*Make sure to install globally so you can use it from the command-line*
 
-    jstestdriver start [ --config path/to/config ]
+### Start test server
 
-If you leave out the `config` flag it will default to `./jsTestDriver.conf`
+    jstestdriver start
 
-Run tests
+This will assume `./jsTestDriver.conf` exists. To specify a different configuration file use the `--config` flag
 
-    jstestdriver run [ --tests path/to/tests ]
+    jsTestDriver start --config path/to/config
 
-If you leave out the `tests` flag it will run all tests by default.
+If you leave out the `--config` flag it will default to `./jsTestDriver.conf`
 
-Stop the server
+### Stop the server
 
     jstestdriver stop
 
-Run an arbitrary command
+### Run tests
 
-    jstestdriver <commands>
+    jstestdriver run
 
-This can be done after any of the above commands as well. E.g.
+By default this will run all the tests. To specify specific test suites use the `--tests` flag.
+
+    jstestdriver run --tests path/to/tests
+
+### Run commands
+
+If you omit the `start`, `stop`, and `run` keywords then it will default to the standard jar file allowing you to perform any native commands. e.g.
+
+    jstestdriver --port 9876 --browser firefoxpath
+
+This can be done after any of the above commands as well. e.g.
 
     jstestdriver run --runnerMode DEBUG
