@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "author": "Richard Layte",
     "description": "Wrapper for Google's jstestdriver",
-    "keywords": [ "test", "tdd" ],
+    "keywords": [ "test", "tdd", "command-line" ],
+    "preferGlobal": true,
+    "dependencies": { "underscore": ">=1.1.6" },
     "bin": "./bin/jstestdriver",
     "scripts": { "install": "curl -o `pwd`/lib/jstestdriver.jar http://js-test-driver.googlecode.com/files/JsTestDriver-1.3.2.jar" },
     "directories": { "lib": "./lib/" }
