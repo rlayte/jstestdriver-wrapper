@@ -22,7 +22,7 @@ This will assume `./jsTestDriver.conf` exists. To specify a different configurat
 
 By default this will run all the tests. To specify specific test suites use the `--tests` flag.
 
-    jstestdriver run --tests path/to/tests
+    jstestdriver run --tests TestSuite
 
 ### Run commands
 
