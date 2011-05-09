@@ -1,0 +1,9 @@
+{
+    "name": "jstestdriver",
+    "version": "1.0.0",
+    "author": "Richard Layte",
+    "description": "Wrapper for Google's jstestdriver",
+    "keywords": [ "test", "tdd" ],
+    "bin": "./bin/jstestdriver",
+    "directories": { "lib": "./lib/" }
+}

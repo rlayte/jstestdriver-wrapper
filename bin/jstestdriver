@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+var forever = require('forever')
+  , path = require('path')
+  , exec = require('child_process').exec
+  , spawn = require('child_process').spawn
+
+
+
+switch(process.argv[2]) {
+    case 'start':
+        exec('forever start ' + path.join(__dirname, './../lib/start_server.js'))
+        break
+    case 'stop':
+        exec('forever stopall')
+        break
+    case 'test':
+        exec('java -jar ' + path.join(__dirname, './../lib/jstestdriver.jar') + ' --tests all --reset', function(err) {
+            console.log(err)
+        })
+        break
+    default:
+        console.log('pipe to jar file')
+        break
+}
