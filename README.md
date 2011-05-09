@@ -12,8 +12,6 @@ This will assume `./jsTestDriver.conf` exists. To specify a different configurat
 
     jsTestDriver start --config path/to/config
 
-If you leave out the `--config` flag it will default to `./jsTestDriver.conf`
-
 ### Stop the server
 
     jstestdriver stop
