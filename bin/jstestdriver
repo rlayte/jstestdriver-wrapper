@@ -29,6 +29,13 @@ switch(process.argv[2]) {
     case 'start':
         var config
 
+        if(_.contains(process.argv, '--config')) {
+            config = process.argv[ _.indexOf(process.argv, '--config') + 1 ]
+        }
+        else {
+            config = './jsTestDriver.conf'
+        }
+
         load_config(config, function(data) {
             port = data.match(/^server\: http\:\/\/localhost\:(\w+)/i)[1]
 
