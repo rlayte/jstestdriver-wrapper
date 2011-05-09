@@ -10,7 +10,7 @@
 
 This will assume `./jsTestDriver.conf` exists. To specify a different configuration file use the `--config` flag
 
-    jsTestDriver start --config path/to/config
+    jstestdriver start --config path/to/config
 
 ### Stop the server
 
